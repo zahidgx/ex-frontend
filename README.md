@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Descripción del Frontend
+El frontend del proyecto está desarrollado con React Native, un framework que permite construir aplicaciones móviles multiplataforma (Android e iOS) utilizando JavaScript y componentes reutilizables. La interfaz permite a los usuarios interactuar con el sistema de forma intuitiva y eficiente.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Funcionalidades Principales
+Pantalla de inicio de sesión (login) con validación de credenciales
 
-## Available Scripts
+CRUD de usuarios: permite crear, consultar, actualizar y eliminar usuarios registrados
 
-In the project directory, you can run:
+Navegación entre pantallas, diseño adaptado a móviles, y consumo eficiente de recursos
 
-### `npm start`
+# Conexión con el Backend
+El frontend se conecta directamente con las rutas del backend Flask alojado en una instancia EC2, utilizando la IP pública del servidor. A través de esta conexión, las acciones realizadas en la app (como registrar un usuario o editar datos) se comunican con el backend, que a su vez actualiza la base de datos MySQL en Amazon RDS.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Despliegue en la Nube
+La aplicación fue desplegada mediante AWS Amplify, una plataforma de desarrollo que facilita el hospedaje y la distribución de aplicaciones móviles y web. Amplify se encargó de compilar y alojar la app, así como de gestionar las conexiones con servicios externos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Tecnologías y Herramientas
+Framework: React Native
 
-### `npm test`
+Estado: useState, useEffect, y navegación con React Navigation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Comunicación: Fetch/axios hacia rutas del backend en EC2
 
-### `npm run build`
+Backend conectado a base de datos MySQL en Amazon RDS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Despliegue: AWS Amplify
